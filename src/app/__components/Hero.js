@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import React from "react"
-import Link from "next/link"
-import { motion } from "framer-motion"
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import myvideo from "../../../public/first.mp4";
 function Hero() {
   return (
@@ -22,12 +22,17 @@ function Hero() {
           className="text-center"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
-            Innovate Your File Storage with Decentralization
+            Decentralized Knowledge Sovereignty{" "}
           </h1>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6">Your Data, Your Control</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold mb-6">
+            A Tokenized Research Ecosystem Empowered by GenAI
+          </h2>
           <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8">
-            Join the movement towards a more decentralized web, where users own and control their data, and where
-            censorship and surveillance are a thing of the past.
+            Unlock a new era of research management. Store your papers securely
+            in a decentralized system, mint research tokens for access, and
+            engage with a GenAI-powered chatbot for personalized insights and
+            summaries. Enjoy full control, privacy, and AI-driven knowledge at
+            your fingertips.
           </p>
           <Link href="/">
             <motion.button
@@ -69,8 +74,7 @@ function Hero() {
         </svg>
       </motion.div>
     </div>
-  )
+  );
 }
 
-export default Hero
-
+export default Hero;

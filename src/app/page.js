@@ -1,4 +1,5 @@
 import Hero from "./__components/Hero";
+import { HeroParallaxDemo } from "./__components/Parallax";
 import { WorldMapDemo } from "./__components/WorldMap";
 
 export default function Home() {
@@ -6,7 +7,8 @@ export default function Home() {
     <>
       <div>
         <Hero />
-        <div className="container justify-center mx-auto">
+          <HeroParallaxDemo/>
+        <div className="container justify-center mx-auto my-0">
           <WorldMapDemo />
         </div>
       </div>

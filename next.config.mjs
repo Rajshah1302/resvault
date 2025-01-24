@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ['aceternity.com','assets.aceternity.com'], 
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.(mp4|webm|ogg|mp3|wav|m4a)$/,
@@ -7,11 +10,10 @@ const nextConfig = {
         loader: "file-loader",
         options: {
           name: "[name].[hash].[ext]",
-          outputPath: "static/media/", // You can customize the output path
+          outputPath: "static/media/", 
         },
       },
     });
-
     return config;
   },
 };
