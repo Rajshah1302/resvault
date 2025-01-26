@@ -4,6 +4,8 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import myvideo from "../../../public/first.mp4";
+
+
 function Hero() {
   return (
     <div className="relative h-screen overflow-hidden">
@@ -34,22 +36,13 @@ function Hero() {
             summaries. Enjoy full control, privacy, and AI-driven knowledge at
             your fingertips.
           </p>
-          <Link href="/">
+          <Link href="/dashboard" className="m-2">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
             >
-              Connect Wallet
-            </motion.button>
-          </Link>
-          <Link href="/" className="m-2">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-lg"
-            >
-              Dashboard
+              Dive into Resvault !!
             </motion.button>
           </Link>
         </motion.div>

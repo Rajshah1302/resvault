@@ -25,8 +25,8 @@ import { researchPapers } from "@/lib/data";
 export function SidebarDemo() {
     const links = [
         {
-          label: "Dashboard",
-          href: "/dashboard",
+          label: "Home",
+          href: "/",
           icon: (
             <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
           ),
@@ -57,41 +57,6 @@ export function SidebarDemo() {
           href: "/papers",
           icon: (
             <IconFileText className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-          ),
-        },
-        {
-          label: "Search & Filter",
-          href: "/search",
-          icon: (
-            <IconSearch className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-          ),
-        },
-        {
-          label: "Token History",
-          href: "/token-history",
-          icon: (
-            <IconHistory className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-          ),
-        },
-        {
-          label: "Analytics & Reports",
-          href: "/analytics",
-          icon: (
-            <IconChartBar className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-          ),
-        },
-        {
-          label: "Settings",
-          href: "/settings",
-          icon: (
-            <IconSettings className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-          ),
-        },
-        {
-          label: "Notifications",
-          href: "/notifications",
-          icon: (
-            <IconBell className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
           ),
         },
         {
