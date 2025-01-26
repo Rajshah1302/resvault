@@ -6,6 +6,8 @@ import { Download } from "lucide-react"
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { use } from 'react';  // Import React.use()
+import { Sidebar } from "@/components/ui/sidebar";
+import { SidebarDemo } from "@/app/__components/Sidebar";
 
 // Fetch file data by ID
 const fetchFileById = async (fileId) => {
@@ -64,8 +66,9 @@ export default function ResearchPage({ params }) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br flex flex-col items-center justify-center p-4">
-      <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl overflow-hidden text-black">
+    <div className="flex h-screen bg-neutral-900 text-neutral-100"> 
+        <SidebarDemo/>  
+      <div className=" mx-auto max-w-4xl  bg-white rounded-3xl shadow-2xl overflow-hidden text-black justify-center items-center">
         <div className="p-8 space-y-6">
           <h1 className="text-4xl font-extrabold text-center bg-clip-text  text-black">
             {file.name || "Research Paper"}
