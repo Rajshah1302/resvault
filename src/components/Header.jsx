@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
+// import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 export function Header() {
   return (
@@ -15,7 +15,7 @@ export function Header() {
 
         {/* Connect Button */}
         <div>
-          <ConnectButton />
+          {/* <ConnectButton /> */}
         </div>
       </div>
     </div>
