@@ -66,9 +66,9 @@ export default function ResearchPage({ params }) {
   }
 
   return (
-    <div className="flex h-screen bg-neutral-900 text-neutral-100"> 
+    <div className="flex  bg-neutral-900 text-neutral-100"> 
         <SidebarDemo/>  
-      <div className=" mx-auto max-w-4xl  bg-white rounded-3xl shadow-2xl overflow-hidden text-black justify-center items-center">
+      <div className=" mx-auto max-w-4xl  bg-white rounded-3xl shadow-2xl  text-black justify-center items-center">
         <div className="p-8 space-y-6">
           <h1 className="text-4xl font-extrabold text-center bg-clip-text  text-black">
             {file.name || "Research Paper"}
@@ -97,7 +97,7 @@ export default function ResearchPage({ params }) {
           <div className="bg-white rounded-t-3xl p-6">
             <h2 className="text-2xl font-bold mb-4 text-center text-black">Research Assistant Chatbot</h2>
             <div className="bg-gray-100 rounded-2xl p-4 shadow-inner">
-              <ChatBot />
+              <ChatBot description={file.description}/>
             </div>
           </div>
         </div>

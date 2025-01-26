@@ -1,35 +1,27 @@
 const express = require("express");
 const axios = require("axios");
-const Groq  =  require("groq-sdk");
+const Groq = require("groq-sdk");
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 const router = express.Router();
 
-router.post('/chat', async (req, res) => {
+router.post("/chat", async (req, res) => {
   try {
     console.log("API called: Starting POST request...");
 
     console.log("Parsing request body...");
-    const { repoUrl, userInput, chatHistory } = req.body;
-    console.log("Request body parsed:", { repoUrl, userInput, chatHistory });
-
-    if (!repoUrl) {
-      return res.status(400).json({ error: "GitHub repository URL is required" });
-    }
+    const { description , userInput, chatHistory } = req.body;
+    console.log("Request body parsed:", { userInput, chatHistory });
 
     console.log("Fetching README content from GitHub...");
-    const readmeResponse = await axios.get(`http://localhost:4000/api/fetchGithubReadme?repoUrl=${repoUrl}`);
 
-    if (!readmeResponse || !readmeResponse.data.readmeContent) {
-      return res.status(400).json({ error: "Failed to fetch README content" });
-    }
-
-    const readmeContent = readmeResponse.data.readmeContent;
-
-    const combinedInput = `${readmeContent}\n\nUser's Question: ${userInput}`;
+    const combinedInput = `\n\nUser's Question: ${userInput}`;
 
     console.log("Generating chat completion...");
-    const chatCompletion = await getGroqChatCompletion(combinedInput, chatHistory);
+    const chatCompletion = await getGroqChatCompletion(
+      combinedInput,
+      chatHistory
+    );
     const assistantResponse = chatCompletion.choices[0]?.message?.content || "";
     console.log("Chat completion generated:", { assistantResponse });
 
@@ -50,8 +42,8 @@ async function getGroqChatCompletion(combinedInput, chatHistory) {
       ...chatHistory,
       {
         role: "system",
-        content: `You are a knowledgeable chatbot designed to assist users with their questions based on the README documentation of GitHub repositories. Your focus is on explaining topics related to cryptocurrency, especially Aptos, in a clear, concise, and friendly manner. When responding, make sure to reference relevant sections of the README to explain concepts and features effectively. Aim to provide detailed yet easy-to-understand answers, breaking down complex crypto concepts into digestible explanations. Your tone should be informative but approachable, helping users understand the technical aspects while offering them guidance on how they can use the project. Keep each response to around 175 words, ensuring that you address the user's inquiry with clarity and precision. give short and crisp informative responses`
-    },
+        content: `You are an intelligent research assistant designed to answer questions related to research papers. Your focus is on reading and understanding the contents of academic papers and addressing user queries in a clear, concise, and informative manner. When responding, refer to relevant sections of the paper to explain key concepts and findings. Break down complex research topics into easy-to-understand explanations, ensuring the user grasps the core ideas. Your tone should be informative but approachable, helping users navigate through the technical aspects of the paper. Provide short, crisp, and direct answers, keeping responses around 175 words, and offering precise guidance for solving doubts related to the paper's content.Give 2 line answers`,
+      },
       {
         role: "user",
         content: combinedInput,

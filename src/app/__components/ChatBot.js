@@ -7,9 +7,9 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
 
-export default function ChatBot({ repo }) {
+export default function ChatBot({ description }) {
   const [state, setState] = useState({
-    repoUrl: repo,
+    description: description,
     userInput: "",
     chatHistory: [
       {
@@ -39,7 +39,7 @@ export default function ChatBot({ repo }) {
 
     try {
       const response = await axios.post("http://localhost:4000/api/chat", {
-        repoUrl: state.repoUrl,
+        description:description,
         userInput: state.userInput,
         chatHistory: [...state.chatHistory, newMessage],
       });
