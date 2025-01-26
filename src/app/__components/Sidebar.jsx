@@ -15,6 +15,8 @@ import {
     IconChartBar,
     IconBell,
     IconLock,
+    IconHome,
+    IconPlus
   } from "@tabler/icons-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -23,92 +25,44 @@ import { PaperCard } from "./paper-card";
 import { researchPapers } from "@/lib/data";
 
 export function SidebarDemo() {
-    const links = [
-        {
-          label: "Dashboard",
-          href: "/dashboard",
-          icon: (
-            <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-          ),
-        },
-        {
-          label: "Profile",
-          href: "#",
-          icon: (
-            <IconUserBolt className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-          ),
-        },
-        {
-          label: "Mint Tokens",
-          href: "/mint-tokens",
-          icon: (
-            <IconCoin className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-          ),
-        },
-        {
-          label: "AI Insights",
-          href: "/ai-insights",
-          icon: (
-            <IconBrain className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-          ),
-        },
-        {
-          label: "Paper Library",
-          href: "/papers",
-          icon: (
-            <IconFileText className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-          ),
-        },
-        {
-          label: "Search & Filter",
-          href: "/search",
-          icon: (
-            <IconSearch className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-          ),
-        },
-        {
-          label: "Token History",
-          href: "/token-history",
-          icon: (
-            <IconHistory className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-          ),
-        },
-        {
-          label: "Analytics & Reports",
-          href: "/analytics",
-          icon: (
-            <IconChartBar className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-          ),
-        },
-        {
-          label: "Settings",
-          href: "/settings",
-          icon: (
-            <IconSettings className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-          ),
-        },
-        {
-          label: "Notifications",
-          href: "/notifications",
-          icon: (
-            <IconBell className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-          ),
-        },
-        {
-          label: "Access Control",
-          href: "/access-control",
-          icon: (
-            <IconLock className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-          ),
-        },
-        {
-          label: "Logout",
-          href: "#",
-          icon: (
-            <IconArrowLeft className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-          ),
-        },
-      ];
+  const links = [
+    {
+      label: "Home",
+      href: "/",
+      icon: (
+        <IconHome className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+      ),
+    },
+    {
+      label: "Find Papers",
+      href: "/find-papers",
+      icon: (
+        <IconSearch className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+      ),
+    },
+    {
+      label: "Your Papers",
+      href: "/dashboard",
+      icon: (
+        <IconFileText className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+      ),
+    },
+    {
+      label: "Add Paper",
+      href: "/files/addNewFile",
+      icon: (
+        <IconPlus className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+      ),
+    },
+    {
+      label: "Mint",
+      href: "/mint",
+      icon: (
+        <IconCoin className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+      ),
+    },
+  ];
+  
       
   const [open, setOpen] = useState(false);
 

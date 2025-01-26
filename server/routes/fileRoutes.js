@@ -27,10 +27,28 @@ router.post("/files", async (req, res) => {
 // Get all files
 router.get("/files", async (req, res) => {
   try {
-    const files = await File.find(); // Populate User with name and email
+    const files = await File.find(); 
     res.status(200).json(files);
   } catch (err) {
     res.status(500).json({ message: err.message });
+  }
+});
+
+router.get("/files/:id", async (req, res) => {
+  try {
+    const { id } = req.params; // Extract the file ID from the route parameter
+
+    // Find the file by its ID
+    const file = await File.findById(id);
+
+    if (!file) {
+      return res.status(404).json({ message: "File not found" });
+    }
+
+    res.status(200).json(file); // Return the file details
+  } catch (err) {
+    console.error("Error fetching file by ID:", err);
+    res.status(500).json({ message: "Internal Server Error" });
   }
 });
 
