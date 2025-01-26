@@ -43,7 +43,7 @@ function Hero() {
               Connect Wallet
             </motion.button>
           </Link>
-          <Link href="/" className="m-2">
+          <Link href="/dashboard" className="m-2">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
