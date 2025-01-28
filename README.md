@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ResVault: Decentralized Knowledge Sovereignty Platform
 
-## Getting Started
+ResVault is a revolutionary platform that leverages blockchain, AI, and tokenized incentives to redefine how researchers share, store, and access knowledge. By ensuring transparency, privacy, and collaboration, ResVault empowers researchers worldwide.
 
-First, run the development server:
+https://github.com/user-attachments/assets/e214eff1-d9a4-4056-bb47-6b4cdc22537b
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features  
+### ✅ Completed Features  
+- [x] **Smart Contract for Research NFT minting**  
+  - Developed using EDU Chain.  
+- [x] **Deployed on Testnet**  
+  - Fully functional and deployed on the **EDU chain Devnet**.  
+- [x] **Decentralized Research Storage**  
+  - Securely upload and store research papers with guaranteed immutability using IPFS.  
+- [x] **Edu Token Economy**  
+  - Mint, earn, and use tokens to access papers and reward contributions.  
+- [x] **AI Chatbot Integration**  
+  - AI-powered chatbot trained on uploaded research papers for insights and summaries.    
+- [x] **User-Friendly Dashboard**  
+  - Manage research papers, track token usage, and interact with AI tools seamlessly.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![WhatsApp Image 2025-01-28 at 19 04 42_f46c5594](https://github.com/user-attachments/assets/e921885f-edf3-46bd-b20f-f640626357be)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## 🛠️ Tech Stack  
+- **Frontend**: Next.js, Tailwind CSS, Shadcn  
+- **Backend**: Serverless Next.js Routes, Node.js  
+- **Database**: IPFS  
+- **Blockchain**: Smart Contracts (EDU Chain)  
+- **AI Integration**: Groq.AI API  
 
-To learn more about Next.js, take a look at the following resources:
+## 🌟 Key Features in Action  
+### 1. **Decentralized Storage**  
+Securely upload research papers with guaranteed privacy and immutability.  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2. **Edu Token Economy**  
+A token-based system for accessing and rewarding research contributions.  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. **AI-Powered Insights**  
+Chatbot trained on research papers to provide summaries and methodology breakdowns.   
 
-## Deploy on Vercel
+### 4. **Dashboard for Researchers**  
+Track and manage research papers, token usage, and collaborations.  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️ Steps to Get Started  
+1. **Clone the Repository**:  
+   ```bash
+   git clone https://github.com/your-username/resvault.git
+   cd resvault
+   ```  
+2. **Install Dependencies**:  
+   ```bash
+   npm install
+   ```  
+3. **Set Up Environment Variables**:  
+   Create a `.env` file in the root directory with the following:
+   ```env
+   DATABASE_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/resvault
+   SMART_CONTRACT_ADDRESS=<your_contract_address>
+   TOKEN_SECRET=<your_token_secret>
+   AI_API_KEY=<groq_ai_api_key>
+   ```  
+  
+4. **Run the Application**:  
+   ```bash
+   npm run dev
+   ```  
+   Open your browser and visit `http://localhost:3000`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 💡 Future Enhancements  
+- [ ] Expand support for Mainnet deployment.  
+- [ ] Add cross-chain compatibility for broader blockchain integration.  
+- [ ] Enhance AI chatbot for multilingual support.  
+- [ ] Introduce gamification for knowledge sharing and collaboration.  
+
+## 👥 Team  
+- **Tanya**  
+- **Sarthak**  
+- **Raj**  
+
+---
+Together, let’s revolutionize knowledge sharing and empower researchers worldwide.
